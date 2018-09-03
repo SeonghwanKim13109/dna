@@ -5,6 +5,7 @@ public class Recursive {
 		// TODO Auto-generated method stub
 		System.out.println(func(10));
 		System.out.println(factorial(0));
+		System.out.println(power(2, 10));
 	}
 
 	public static int func(int i) {
@@ -34,5 +35,12 @@ public class Recursive {
 			System.out.print(n + " * ");
 			return n*factorial(n-1);
 		}
+	}
+	
+	public static double power(double x, int n) {
+		if(n == 0) 
+			return 1;
+		else
+			return x*power(x,n-1);
 	}
 }
