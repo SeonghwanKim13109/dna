@@ -10,7 +10,7 @@ public class Recursive {
 		for(int i = 1 ; i< 10 ; i++) {
 			System.out.print(fibonachi(i)+"\t");
 		}
-		System.out.println("\n"+gcd(30, 12));
+		System.out.println("\n"+gcd(24, 16));
 	}
 
 	public static int func(int i) {
@@ -64,9 +64,10 @@ public class Recursive {
 			m = n;
 			n = temp;
 		}
-		if(m%n == 0)
+		/*if(m%n == 0)
 			return n;
 		else
-			return gcd(n,m%n);
+			return gcd(n,m%n);*/
+		return (m%n)==0 ? n : gcd(n,m%n); 
 	}
 }
