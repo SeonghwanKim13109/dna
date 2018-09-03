@@ -6,6 +6,11 @@ public class Recursive {
 		System.out.println(func(10));
 		System.out.println(factorial(0));
 		System.out.println(power(2, 10));
+		
+		for(int i = 1 ; i< 10 ; i++) {
+			System.out.print(fibonachi(i)+"\t");
+		}
+		System.out.println("\n"+gcd(30, 12));
 	}
 
 	public static int func(int i) {
@@ -42,5 +47,26 @@ public class Recursive {
 			return 1;
 		else
 			return x*power(x,n-1);
+	}
+	
+	public static int fibonachi(int n) {
+		if(n == 0)
+			return 0;
+		else if(n == 1)
+			return 1;
+		else
+			return fibonachi(n-1) + fibonachi(n-2);
+	}
+	
+	public static int gcd(int m, int n) {
+		if(m<n) {
+			int temp = m;
+			m = n;
+			n = temp;
+		}
+		if(m%n == 0)
+			return n;
+		else
+			return gcd(n,m%n);
 	}
 }
