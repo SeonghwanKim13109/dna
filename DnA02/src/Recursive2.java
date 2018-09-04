@@ -5,6 +5,7 @@ public class Recursive2 {
 		// TODO Auto-generated method stub
 		System.out.println(stringLenth("i love you"));
 		printString("i love you");
+		reversePrintString("i love you");
 	}
 	
 	public static int stringLenth(String str) {
@@ -22,6 +23,17 @@ public class Recursive2 {
 		else {
 			System.out.print(str.charAt(0));
 			printString(str.substring(1));
+		}
+	}
+	
+	public static void reversePrintString(String str) {
+		char temp;
+		if(stringLenth(str) == 0)
+			return;
+		else {
+			temp = str.charAt(0);
+			reversePrintString(str.substring(1));
+			System.out.print(temp);
 		}
 	}
 }
