@@ -5,9 +5,15 @@ public class Recursive2 {
 		// TODO Auto-generated method stub
 		System.out.println(stringLenth("i love you"));
 		printString("i love you");
+		
 		reversePrintString("i love you");
 		System.out.println();
+		
 		printBinary(10,"");
+		System.out.println();
+		
+		int[] arr = {1,2,3,4,5,6,7,8,9,10};
+		System.out.println(sumOfArray(arr, arr.length-1));
 	}
 	
 	public static int stringLenth(String str) {
@@ -45,6 +51,17 @@ public class Recursive2 {
 		else {
 			printBinary(n/2,str);
 			System.out.print(n%2);
+		}
+	}
+	
+	public static int sumOfArray(int[] arr, int n) {
+		if(arr.length <= 0 || n > arr.length)
+			throw new ArrayIndexOutOfBoundsException();
+		if(n < 0)
+			return 0;
+		else {
+			return arr[n] + sumOfArray(arr, n-1);
+			
 		}
 	}
 }
