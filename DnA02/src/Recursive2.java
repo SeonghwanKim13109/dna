@@ -6,6 +6,8 @@ public class Recursive2 {
 		System.out.println(stringLenth("i love you"));
 		printString("i love you");
 		reversePrintString("i love you");
+		System.out.println();
+		printBinary(10,"");
 	}
 	
 	public static int stringLenth(String str) {
@@ -34,6 +36,15 @@ public class Recursive2 {
 			temp = str.charAt(0);
 			reversePrintString(str.substring(1));
 			System.out.print(temp);
+		}
+	}
+	
+	public static void printBinary(int n,String str) {
+		if(n==0) 
+			return;
+		else {
+			printBinary(n/2,str);
+			System.out.print(n%2);
 		}
 	}
 }
